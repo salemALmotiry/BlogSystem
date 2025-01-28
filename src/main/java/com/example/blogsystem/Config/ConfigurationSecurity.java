@@ -43,7 +43,7 @@ public class ConfigurationSecurity {
                 .authorizeHttpRequests()
                 .requestMatchers("/api/v1/user/register","/api/v1/blog/get-all").permitAll()
                 .requestMatchers("/api/v1/blog/add","/api/v1/blog/update","/api/v1/blog/delete/","/api/v1/blog/get-by-id/","/api/v1/blog/get-by-title/","/api/v1/blog/get-my-blogs").hasAuthority("USER")
-                .anyRequest().authenticated()
+                .anyRequest().permitAll()
                 .and()
                 .logout()
                 .logoutUrl("/api/v1/logout")

@@ -76,7 +76,6 @@ public class BlogService {
 
     public Blog getBlogByTitle(String title) {
 
-
         return blogRepository.findBlogByTitle(title);
     }
 
